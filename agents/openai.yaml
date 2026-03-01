@@ -1,4 +1,4 @@
 interface:
   display_name: "JLPT N2 My Trainer"
   short_description: "Token-efficient interactive N2 trainer"
-  default_prompt: "Start JLPT N2 one-by-one interactive practice in economy mode for grammar, vocabulary, listening, or review, with source labels, furigana only in explanations, and logic-grouped review notes."
+  default_prompt: "Start JLPT N2 one-by-one interactive practice in economy mode for grammar, vocabulary, reading, listening, or review, with source labels, furigana only in explanations, and logic-grouped review notes."

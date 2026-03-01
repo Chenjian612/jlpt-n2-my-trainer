@@ -6,6 +6,7 @@ Personal Codex skill for JLPT N2 preparation.
 
 - Grammar drills: one-by-one interactive multiple-choice practice
 - Vocabulary drills: context, synonym, collocation, and meaning discrimination
+- Reading drills: article-first practice with official-source-first selection
 - Listening analysis: trap points, keywords, and answer evidence
 - Wrong-answer review: targeted reinforcement from local wrong-book data
 - Local official resource sync: keep public JLPT sample materials on disk
@@ -23,6 +24,7 @@ Personal Codex skill for JLPT N2 preparation.
 
 - `grammar_drill`
 - `vocab_drill`
+- `reading_drill`
 - `listening_analyze`
 - `review_wrong`
 - `vocab_review_wrong`
@@ -35,8 +37,10 @@ See [skill.yaml](./skill.yaml) and [SKILL.md](./SKILL.md) for behavior and defau
 - [skill.yaml](./skill.yaml)
 - [prompts/](./prompts)
 - [examples/](./examples)
+- [notes/](./notes)
 - [scripts/append_wrong.py](./scripts/append_wrong.py)
 - [scripts/sync_official_resources.py](./scripts/sync_official_resources.py)
+- [scripts/extract_pdf_text.sh](./scripts/extract_pdf_text.sh)
 
 ## Example Triggers
 
@@ -50,6 +54,12 @@ Start vocab practice:
 
 ```text
 启动日语N2单词练习
+```
+
+Start reading practice:
+
+```text
+启动日语N2阅读练习
 ```
 
 Run with explicit JSON-style inputs:
@@ -81,4 +91,10 @@ python3 scripts/sync_official_resources.py --max-child-pages 160
 
 ```bash
 python3 scripts/append_wrong.py --result /path/to/result.json --answers /path/to/answers.json
+```
+
+## Extract Local Reading Pages
+
+```bash
+bash scripts/extract_pdf_text.sh /absolute/path/to/N2R.pdf 14 14
 ```

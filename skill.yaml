@@ -1,12 +1,12 @@
 name: jlpt-n2-my-trainer
-version: 0.4.0
-description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills for grammar, vocabulary, listening, and wrong-answer review, with source labels, logic-grouped notes, and local official resource sync."
+version: 0.5.0
+description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills for grammar, vocabulary, reading, listening, and wrong-answer review, with source labels, logic-grouped notes, and local official resource sync."
 author: "Chen Jian"
 
 inputs:
   - name: mode
     required: true
-    description: "grammar_drill | vocab_drill | listening_analyze | review_wrong | vocab_review_wrong"
+    description: "grammar_drill | vocab_drill | reading_drill | listening_analyze | review_wrong | vocab_review_wrong"
   - name: output_style
     required: false
     description: "interactive | json (default: interactive)"
@@ -31,6 +31,12 @@ inputs:
   - name: count
     required: false
     description: "number of questions (default: 5)"
+  - name: source_file
+    required: false
+    description: "For reading_drill: N2R-2018 | N2R-2012 | local PDF path"
+  - name: page_hint
+    required: false
+    description: "For reading_drill: preferred page number or page range hint"
   - name: focus_point
     required: false
     description: "e.g., にかかわらず / 近义词 / 固定搭配 / 副词"
@@ -53,6 +59,8 @@ outputs:
     description: "Path to wrong-answer log file (./data/wrong.jsonl)."
   - name: resource_index_path
     description: "Path to local official N2 index (./references/official/meta/n2_index.csv)."
+  - name: notes_path
+    description: "Path to committed study notes directory (./notes/)."
 
 storage:
   wrong_book: "./data/wrong.jsonl"

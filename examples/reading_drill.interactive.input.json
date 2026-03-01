@@ -1,0 +1,12 @@
+{
+  "mode": "reading_drill",
+  "output_style": "interactive",
+  "token_mode": "economy",
+  "source_style": "official_adapted",
+  "drill_flow": "one_by_one",
+  "explain_level": "standard",
+  "difficulty": "normal",
+  "count": 1,
+  "source_file": "N2R-2018",
+  "page_hint": "14"
+}

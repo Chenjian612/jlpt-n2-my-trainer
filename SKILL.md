@@ -1,6 +1,6 @@
 ---
 name: "jlpt-n2-my-trainer"
-description: "Personal JLPT N2 training skill for July exam prep with five modes: grammar drills, vocabulary drills, listening trap analysis, grammar wrong-answer reinforcement, and vocabulary wrong-answer reinforcement. Use token-efficient one-by-one interactive practice by default; include source labels, explanation-only furigana, and logic-grouped review notes. Switch to strict JSON only when user explicitly requests machine-readable output. Includes local official-resource sync and wrong-book workflows."
+description: "Personal JLPT N2 training skill for July exam prep with six modes: grammar drills, vocabulary drills, reading drills, listening trap analysis, grammar wrong-answer reinforcement, and vocabulary wrong-answer reinforcement. Use token-efficient one-by-one interactive practice by default; include source labels, explanation-only furigana, and logic-grouped review notes. Switch to strict JSON only when user explicitly requests machine-readable output. Includes local official-resource sync and wrong-book workflows."
 ---
 
 # JLPT N2 My Trainer
@@ -32,6 +32,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 ## Mode Routing
 - `mode=grammar_drill`: Generate multiple-choice grammar questions.
 - `mode=vocab_drill`: Generate multiple-choice vocabulary questions.
+- `mode=reading_drill`: Run one-by-one reading practice with article-first exam flow.
 - `mode=listening_analyze`: Analyze traps, clues, and answer basis from listening content.
 - `mode=review_wrong`: Rank grammar weaknesses and generate targeted reinforcement questions.
 - `mode=vocab_review_wrong`: Rank vocabulary weaknesses and generate targeted reinforcement questions.
@@ -48,6 +49,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 - Prompt templates:
   - `prompts/grammar_drill.md`
   - `prompts/vocab_drill.md`
+  - `prompts/reading_drill.md`
   - `prompts/listening_analyze.md`
   - `prompts/review_wrong.md`
   - `prompts/vocab_review_wrong.md`
@@ -55,14 +57,20 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
   - `examples/grammar_drill.input.json`
   - `examples/grammar_drill.interactive.input.json`
   - `examples/vocab_drill.interactive.input.json`
+  - `examples/reading_drill.interactive.input.json`
   - `examples/listening_analyze.input.json`
   - `examples/review_wrong.interactive.input.json`
   - `examples/vocab_review_wrong.interactive.input.json`
+- Committed notes:
+  - `notes/jlpt-n2-logic-notes.md`
+  - `notes/jlpt-n2-logic-cards.md`
 - Wrong-answer log:
   - `data/wrong.jsonl`
 - Helper scripts:
   - `scripts/append_wrong.py`
   - `scripts/sync_official_resources.py`
+  - `scripts/extract_pdf_text.sh`
+  - `scripts/extract_pdf_text.swift`
 
 ## Official Resource Library (Local Files)
 - Local root: `references/official/`
@@ -108,7 +116,17 @@ Use policy:
 - If user asks for memory-friendly explanation, add paired short sentences.
 - If JSON mode, follow schema in `prompts/vocab_drill.md`.
 
-### 3) listening_analyze
+### 3) reading_drill
+- Default to article-first exam flow: show passage, then question, then options.
+- Prefer local official reading resources (`N2R-2018`, `N2R-2012`) when available.
+- Use `scripts/extract_pdf_text.sh` to read local page text when needed.
+- If exact official wording is too long to reproduce in chat, compress or adapt the passage while preserving question logic and clearly label the source.
+- Prepend each question with a compact source label and, when applicable, a page hint.
+- Do not show furigana in the passage; add furigana in explanations for key words and evidence words only.
+- If user asks for memory-friendly explanation, add question type, evidence location, wrong-option elimination, and one reading hook.
+- If JSON mode, follow schema in `prompts/reading_drill.md`.
+
+### 4) listening_analyze
 - Parse `content` (dialogue, prompt, options; partial is allowed).
 - Infer question type (课题理解, 要点理解, 即时应答, 综合理解, etc.).
 - Provide scene prediction, keywords, transition signals, and at least 3 trap points.
@@ -116,7 +134,7 @@ Use policy:
 - In `token_mode=economy`, output compact clue chain rather than long paraphrase.
 - In interactive style, prioritize readability; in JSON style, follow schema in `prompts/listening_analyze.md`.
 
-### 4) review_wrong
+### 5) review_wrong
 - Use `wrong_items` input.
 - If `wrong_items` is missing, read recent lines from `data/wrong.jsonl` to infer grammar weak points.
 - Rank weakness types with weights and generate 5 targeted grammar questions.
@@ -127,7 +145,7 @@ Use policy:
 - Add paired-sentence reinforcement for confused pairs when useful.
 - In JSON mode, follow schema in `prompts/review_wrong.md`.
 
-### 5) vocab_review_wrong
+### 6) vocab_review_wrong
 - Use `wrong_items` input.
 - If `wrong_items` is missing, read recent lines from `data/wrong.jsonl` to infer vocabulary weak points.
 - Rank weakness types with weights and generate 5 targeted vocabulary questions.
