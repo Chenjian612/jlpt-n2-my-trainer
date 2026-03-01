@@ -1,0 +1,11 @@
+{
+  "mode": "vocab_drill",
+  "output_style": "interactive",
+  "token_mode": "economy",
+  "source_style": "simulated_official",
+  "drill_flow": "one_by_one",
+  "explain_level": "standard",
+  "difficulty": "normal",
+  "count": 5,
+  "focus_point": "近义词"
+}

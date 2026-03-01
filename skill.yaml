@@ -1,0 +1,70 @@
+name: jlpt-n2-my-trainer
+version: 0.4.0
+description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills for grammar, vocabulary, listening, and wrong-answer review, with source labels, logic-grouped notes, and local official resource sync."
+author: "Chen Jian"
+
+inputs:
+  - name: mode
+    required: true
+    description: "grammar_drill | vocab_drill | listening_analyze | review_wrong | vocab_review_wrong"
+  - name: output_style
+    required: false
+    description: "interactive | json (default: interactive)"
+  - name: token_mode
+    required: false
+    description: "economy | balanced | deep (default: economy)"
+  - name: source_style
+    required: false
+    description: "simulated_official | official_adapted (default: simulated_official)"
+  - name: note_style
+    required: false
+    description: "logic_grouped | compact (default: logic_grouped for review summaries)"
+  - name: drill_flow
+    required: false
+    description: "one_by_one | batch (default: one_by_one for drills)"
+  - name: explain_level
+    required: false
+    description: "brief | standard | detailed (default: standard)"
+  - name: difficulty
+    required: false
+    description: "easy | normal | hard (default: normal)"
+  - name: count
+    required: false
+    description: "number of questions (default: 5)"
+  - name: focus_point
+    required: false
+    description: "e.g., にかかわらず / 近义词 / 固定搭配 / 副词"
+  - name: content
+    required: false
+    description: "For listening_analyze: paste transcript/question/options here"
+  - name: wrong_items
+    required: false
+    description: "For review modes: wrong-question JSON array or use local wrong.jsonl"
+  - name: user_answers
+    required: false
+    description: "Optional answer map, e.g. {\"G001\":\"B\"}, used by append_wrong.py"
+
+outputs:
+  - name: practice_output
+    description: "Human-friendly interactive drill output (default)."
+  - name: result_json
+    description: "Strict JSON output for scripting/statistics when output_style=json."
+  - name: wrong_log_path
+    description: "Path to wrong-answer log file (./data/wrong.jsonl)."
+  - name: resource_index_path
+    description: "Path to local official N2 index (./references/official/meta/n2_index.csv)."
+
+storage:
+  wrong_book: "./data/wrong.jsonl"
+  official_resource_root: "./references/official"
+
+runtime:
+  defaults:
+    output_style: interactive
+    token_mode: economy
+    source_style: simulated_official
+    note_style: logic_grouped
+    drill_flow: one_by_one
+    explain_level: standard
+    difficulty: normal
+    count: 5

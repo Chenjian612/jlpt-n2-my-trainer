@@ -1,0 +1,12 @@
+# Local-only study data
+/data/wrong.jsonl
+
+# Downloaded official resource cache
+/references/official/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

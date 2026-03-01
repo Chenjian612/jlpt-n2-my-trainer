@@ -1,0 +1,8 @@
+{
+  "mode": "vocab_review_wrong",
+  "output_style": "interactive",
+  "token_mode": "economy",
+  "note_style": "logic_grouped",
+  "drill_flow": "one_by_one",
+  "explain_level": "standard"
+}

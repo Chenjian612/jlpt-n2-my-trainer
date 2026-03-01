@@ -1,0 +1,7 @@
+{
+  "mode": "listening_analyze",
+  "output_style": "interactive",
+  "token_mode": "economy",
+  "explain_level": "standard",
+  "content": "（把你听力题内容贴这里：题干+选项/对话）"
+}
