@@ -5,6 +5,7 @@
 - output_style=interactive|json（默认 interactive）
 - token_mode=economy|balanced|deep（默认 economy）
 - source_style=simulated_official|official_adapted（默认 simulated_official）
+- continuity_mode=sequential|manual（默认 sequential）
 - drill_flow=one_by_one|batch（默认 one_by_one）
 - explain_level=brief|standard|detailed（默认 standard）
 - difficulty=easy|normal|hard（默认 normal）
@@ -12,6 +13,12 @@
 - focus_point（可选）
 
 任务：生成 JLPT N2 文法选择题，不得使用 N1 专属语法点。
+
+顺序模式要求：
+- 当 continuity_mode=sequential 且未提供 focus_point 时，优先读取本地 `data/progress.json` 与 `data/grammar_queue.json`。
+- 使用当前队列项的 `focus_point`、`logic_group`、`planned_count` 作为本轮默认配置。
+- 用户若说“继续练习/继续昨天的文法”，视为必须续接当前队列项，而不是重新随机出题。
+- 用户若显式指定新的 focus_point，则以用户要求为准。
 
 通用要求：
 1) 若提供 focus_point，则至少 60% 题目围绕该点或近义/易混点。

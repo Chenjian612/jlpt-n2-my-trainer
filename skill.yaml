@@ -1,12 +1,12 @@
 name: jlpt-n2-my-trainer
-version: 0.5.0
-description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills for grammar, vocabulary, reading, listening, and wrong-answer review, with source labels, logic-grouped notes, and local official resource sync."
+version: 0.7.0
+description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills and study packs for grammar, vocabulary, reading, listening, and review, with source labels, logic-grouped notes, local official resource sync, and sequential local progress tracking."
 author: "Chen Jian"
 
 inputs:
   - name: mode
     required: true
-    description: "grammar_drill | vocab_drill | reading_drill | listening_analyze | review_wrong | vocab_review_wrong"
+    description: "grammar_drill | grammar_study | vocab_drill | vocab_study | reading_drill | listening_analyze | review_wrong | vocab_review_wrong"
   - name: output_style
     required: false
     description: "interactive | json (default: interactive)"
@@ -19,6 +19,9 @@ inputs:
   - name: note_style
     required: false
     description: "logic_grouped | compact (default: logic_grouped for review summaries)"
+  - name: continuity_mode
+    required: false
+    description: "sequential | manual (default: sequential; follow local queue/progress when available)"
   - name: drill_flow
     required: false
     description: "one_by_one | batch (default: one_by_one for drills)"
@@ -30,7 +33,7 @@ inputs:
     description: "easy | normal | hard (default: normal)"
   - name: count
     required: false
-    description: "number of questions (default: 5)"
+    description: "number of questions or study items (defaults: grammar_drill=5, grammar_study=3, vocab_drill=5, vocab_study=12, reading_drill=1)"
   - name: source_file
     required: false
     description: "For reading_drill: N2R-2018 | N2R-2012 | local PDF path"
@@ -61,10 +64,22 @@ outputs:
     description: "Path to local official N2 index (./references/official/meta/n2_index.csv)."
   - name: notes_path
     description: "Path to committed study notes directory (./notes/)."
+  - name: progress_path
+    description: "Path to local sequential progress file (./data/progress.json)."
+  - name: session_log_path
+    description: "Path to local session log (./data/session_log.jsonl)."
 
 storage:
   wrong_book: "./data/wrong.jsonl"
   official_resource_root: "./references/official"
+  progress_file: "./data/progress.json"
+  session_log_file: "./data/session_log.jsonl"
+  grammar_queue_file: "./data/grammar_queue.json"
+  grammar_study_queue_file: "./data/grammar_study_queue.json"
+  vocab_queue_file: "./data/vocab_queue.json"
+  vocab_study_queue_file: "./data/vocab_study_queue.json"
+  reading_queue_file: "./data/reading_queue.json"
+  listening_queue_file: "./data/listening_queue.json"
 
 runtime:
   defaults:
@@ -72,6 +87,7 @@ runtime:
     token_mode: economy
     source_style: simulated_official
     note_style: logic_grouped
+    continuity_mode: sequential
     drill_flow: one_by_one
     explain_level: standard
     difficulty: normal

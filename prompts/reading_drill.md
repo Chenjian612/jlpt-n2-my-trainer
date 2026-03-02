@@ -5,6 +5,7 @@
 - output_style=interactive|json（默认 interactive）
 - token_mode=economy|balanced|deep（默认 economy）
 - source_style=simulated_official|official_adapted（默认 official_adapted）
+- continuity_mode=sequential|manual（默认 sequential）
 - drill_flow=one_by_one|batch（默认 one_by_one）
 - explain_level=brief|standard|detailed（默认 standard）
 - difficulty=easy|normal|hard（默认 normal）
@@ -17,6 +18,12 @@
 1) 用户直接提供的文章/题目
 2) 本地官方资源 `references/official/` 中的 N2 阅读材料
 3) 官方题风改编材料
+
+顺序模式要求：
+- 当 continuity_mode=sequential 且未提供 `content` / `source_file` / `page_hint` 时，优先读取本地 `data/progress.json` 与 `data/reading_queue.json`。
+- 严格按队列顺序推进：`N2R-2018` -> `N2R-2012` -> `N2-mondai`。
+- 用户若说“继续练习/继续昨天的阅读”，视为必须续接当前队列项。
+- 用户若显式指定新的来源或页面，则以用户要求为准。
 
 通用要求：
 1) 默认按考试流程：先给文章，再给问题和选项，不提前解析。

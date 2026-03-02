@@ -5,6 +5,7 @@
 - output_style=interactive|json（默认 interactive）
 - token_mode=economy|balanced|deep（默认 economy）
 - source_style=simulated_official|official_adapted（默认 simulated_official）
+- continuity_mode=sequential|manual（默认 sequential）
 - drill_flow=one_by_one|batch（默认 one_by_one）
 - explain_level=brief|standard|detailed（默认 standard）
 - difficulty=easy|normal|hard（默认 normal）
@@ -12,6 +13,12 @@
 - focus_point（可选，如：近义词 / 固定搭配 / 副词 / 汉字词义）
 
 任务：生成 JLPT N2 词汇练习题。
+
+顺序模式要求：
+- 当 continuity_mode=sequential 且未提供 focus_point 时，优先读取本地 `data/progress.json` 与 `data/vocab_queue.json`。
+- 使用当前队列项的 `focus_point`、`weakness_group`、`planned_count` 作为本轮默认配置。
+- 用户若说“继续练习/继续昨天的单词”，视为必须续接当前队列项。
+- 用户若显式指定新的 focus_point，则以用户要求为准。
 
 题型优先级：
 1) 语境填空（默认）

@@ -1,5 +1,13 @@
 # Local-only study data
 /data/wrong.jsonl
+/data/grammar_queue.json
+/data/grammar_study_queue.json
+/data/vocab_queue.json
+/data/vocab_study_queue.json
+/data/reading_queue.json
+/data/listening_queue.json
+/data/progress.json
+/data/session_log.jsonl
 
 # Downloaded official resource cache
 /references/official/
