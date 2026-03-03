@@ -140,6 +140,26 @@ These are intentionally not tracked in git:
 python3 scripts/sync_official_resources.py --max-child-pages 160
 ```
 
+## Sync Progress Snapshot To Git
+
+This repo ignores `data/*.json` and `data/session_log.jsonl` by default, but you can still back them up on demand.
+
+The helper below copies your local Codex JLPT progress data into this repo, rewrites the internal absolute paths in `data/progress.json` to match the repo copy, force-adds the ignored files, commits them, and optionally pushes:
+
+```bash
+python3 scripts/sync_progress_snapshot.py
+```
+
+Useful options:
+
+```bash
+python3 scripts/sync_progress_snapshot.py --no-push
+python3 scripts/sync_progress_snapshot.py --commit-message "Update JLPT progress after grammar study"
+python3 scripts/sync_progress_snapshot.py --source-data-dir "C:\path\to\jlpt-n2-my-trainer\data"
+```
+
+If the default source directory is wrong, set `JLPT_N2_TRAINER_DATA_DIR` or pass `--source-data-dir`.
+
 ## Append Wrong Answers
 
 ```bash

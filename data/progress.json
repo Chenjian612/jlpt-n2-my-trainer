@@ -2,10 +2,10 @@
   "version": 1,
   "initialized_at": "2026-03-03T00:26:55Z",
   "continuity_mode": "sequential",
-  "session_log_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\session_log.jsonl",
+  "session_log_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\session_log.jsonl",
   "tracks": {
     "grammar_drill": {
-      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\grammar_queue.json",
+      "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\grammar_queue.json",
       "current_index": 1,
       "current_item_id": "GQ002",
       "item_states": {
@@ -22,7 +22,7 @@
       }
     },
     "grammar_study": {
-      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\grammar_study_queue.json",
+      "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\grammar_study_queue.json",
       "current_index": 1,
       "current_item_id": "GS002",
       "item_states": {
@@ -39,25 +39,25 @@
       }
     },
     "vocab_drill": {
-      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\vocab_queue.json",
+      "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\vocab_queue.json",
       "current_index": 0,
       "current_item_id": "VQ001",
       "item_states": {}
     },
     "vocab_study": {
-      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\vocab_study_queue.json",
+      "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\vocab_study_queue.json",
       "current_index": 0,
       "current_item_id": "VS001",
       "item_states": {}
     },
     "reading_drill": {
-      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\reading_queue.json",
+      "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\reading_queue.json",
       "current_index": 0,
       "current_item_id": "",
       "item_states": {}
     },
     "listening_analyze": {
-      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\listening_queue.json",
+      "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\listening_queue.json",
       "current_index": 0,
       "current_item_id": "",
       "item_states": {}
