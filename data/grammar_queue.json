@@ -1,0 +1,366 @@
+{
+  "mode": "grammar_drill",
+  "sequence_type": "curated_focus_packs",
+  "items": [
+    {
+      "id": "GQ001",
+      "order": 1,
+      "focus_point": "にかかわらず / を問わず",
+      "logic_group": "条件排除",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ002",
+      "order": 2,
+      "focus_point": "にしては / わりに",
+      "logic_group": "标准型 vs 条件型反预期",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ003",
+      "order": 3,
+      "focus_point": "ものの / けれども",
+      "logic_group": "转折",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ004",
+      "order": 4,
+      "focus_point": "ばかりか / うえに",
+      "logic_group": "递进",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ005",
+      "order": 5,
+      "focus_point": "とはかぎらない / わけではない",
+      "logic_group": "保留判断",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ006",
+      "order": 6,
+      "focus_point": "ざるをえない / ないわけにはいかない",
+      "logic_group": "义务与不可避免",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ007",
+      "order": 7,
+      "focus_point": "ずにはいられない / てたまらない",
+      "logic_group": "情感不可抑制",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ008",
+      "order": 8,
+      "focus_point": "おそれがある / かねない",
+      "logic_group": "消极推量",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ009",
+      "order": 9,
+      "focus_point": "ようにする / ことにする",
+      "logic_group": "习惯与决定",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ010",
+      "order": 10,
+      "focus_point": "ところがある / ものがある",
+      "logic_group": "人物侧面",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ011",
+      "order": 11,
+      "focus_point": "たとたん / かと思うと",
+      "logic_group": "紧接发生",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ012",
+      "order": 12,
+      "focus_point": "たびに / につけ",
+      "logic_group": "每次触发",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ013",
+      "order": 13,
+      "focus_point": "おかげで / せいで",
+      "logic_group": "原因评价",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ014",
+      "order": 14,
+      "focus_point": "ことなく / ないで",
+      "logic_group": "未进行动作",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ015",
+      "order": 15,
+      "focus_point": "ようがない / しかない",
+      "logic_group": "手段缺失",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ016",
+      "order": 16,
+      "focus_point": "に対して / に比べて",
+      "logic_group": "比较与对比",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ017",
+      "order": 17,
+      "focus_point": "に応じて / にしたがって",
+      "logic_group": "对应变化",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ018",
+      "order": 18,
+      "focus_point": "を通じて / を通して",
+      "logic_group": "期间与媒介",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ019",
+      "order": 19,
+      "focus_point": "に基づいて / にもとづく",
+      "logic_group": "依据",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ020",
+      "order": 20,
+      "focus_point": "をめぐって / を中心に",
+      "logic_group": "围绕主题",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ021",
+      "order": 21,
+      "focus_point": "次第 / 次第で",
+      "logic_group": "一旦与取决于",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ022",
+      "order": 22,
+      "focus_point": "一方だ / ばかりだ",
+      "logic_group": "持续变化",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ023",
+      "order": 23,
+      "focus_point": "っぽい / がち",
+      "logic_group": "倾向",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ024",
+      "order": 24,
+      "focus_point": "最中に / ところに",
+      "logic_group": "场景时点",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ025",
+      "order": 25,
+      "focus_point": "上で / 上は",
+      "logic_group": "前提与既然",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ026",
+      "order": 26,
+      "focus_point": "反面 / 一方で",
+      "logic_group": "双面评价",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ027",
+      "order": 27,
+      "focus_point": "あまり / ほど",
+      "logic_group": "程度否定",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ028",
+      "order": 28,
+      "focus_point": "ように見える / ような気がする",
+      "logic_group": "主观判断",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ029",
+      "order": 29,
+      "focus_point": "ないことはない / ないこともない",
+      "logic_group": "弱肯定",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ030",
+      "order": 30,
+      "focus_point": "に違いない / はずだ",
+      "logic_group": "高确定推量",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ031",
+      "order": 31,
+      "focus_point": "まま / っぱなし",
+      "logic_group": "状态持续",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ032",
+      "order": 32,
+      "focus_point": "向き / 向け",
+      "logic_group": "对象适配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ033",
+      "order": 33,
+      "focus_point": "おそれ / 心配 / 不安 expression pack",
+      "logic_group": "风险表达",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ034",
+      "order": 34,
+      "focus_point": "逆接综合 pack",
+      "logic_group": "转折综合",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ035",
+      "order": 35,
+      "focus_point": "递进综合 pack",
+      "logic_group": "递进综合",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    },
+    {
+      "id": "GQ036",
+      "order": 36,
+      "focus_point": "反预期综合 pack",
+      "logic_group": "反预期综合",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2G-2018 -> N2G-2012 -> targeted pack"
+    }
+  ]
+}

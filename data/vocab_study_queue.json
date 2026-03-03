@@ -1,0 +1,266 @@
+{
+  "mode": "vocab_study",
+  "sequence_type": "curated_daily_study",
+  "items": [
+    {
+      "id": "VS001",
+      "order": 1,
+      "focus_point": "近义词: 改善 / 改良",
+      "weakness_group": "近义辨析",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS002",
+      "order": 2,
+      "focus_point": "近义词: 追加 / 追加する context",
+      "weakness_group": "近义辨析",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS003",
+      "order": 3,
+      "focus_point": "近义词: 増える / 増やす",
+      "weakness_group": "词性",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS004",
+      "order": 4,
+      "focus_point": "近义词: 減る / 減らす",
+      "weakness_group": "词性",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS005",
+      "order": 5,
+      "focus_point": "近义词: 確か / 正確",
+      "weakness_group": "词义",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS006",
+      "order": 6,
+      "focus_point": "副词: だんだん / ますます",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS007",
+      "order": 7,
+      "focus_point": "副词: そろそろ / まもなく",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS008",
+      "order": 8,
+      "focus_point": "副词: たまたま / わざわざ",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS009",
+      "order": 9,
+      "focus_point": "副词: かなり / ずいぶん",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS010",
+      "order": 10,
+      "focus_point": "搭配: 影響を与える / 影響が出る",
+      "weakness_group": "搭配",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS011",
+      "order": 11,
+      "focus_point": "搭配: 努力する / 工夫する",
+      "weakness_group": "搭配",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS012",
+      "order": 12,
+      "focus_point": "搭配: 役に立つ / 参考になる",
+      "weakness_group": "搭配",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS013",
+      "order": 13,
+      "focus_point": "搭配: 間に合う / 間に合わせる",
+      "weakness_group": "词性",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS014",
+      "order": 14,
+      "focus_point": "搭配: 気をつける / 気にする",
+      "weakness_group": "搭配",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS015",
+      "order": 15,
+      "focus_point": "汉字词义: 余裕 / 余分",
+      "weakness_group": "词义",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS016",
+      "order": 16,
+      "focus_point": "汉字词义: 変更 / 変化",
+      "weakness_group": "词义",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS017",
+      "order": 17,
+      "focus_point": "汉字词义: 提出 / 提案",
+      "weakness_group": "词义",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS018",
+      "order": 18,
+      "focus_point": "汉字词义: 見送り / 見直し",
+      "weakness_group": "词义",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS019",
+      "order": 19,
+      "focus_point": "拟态副词: しっかり / はっきり",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS020",
+      "order": 20,
+      "focus_point": "拟态副词: ぐっすり / ゆっくり",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS021",
+      "order": 21,
+      "focus_point": "自动词/他动词 pack",
+      "weakness_group": "词性",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS022",
+      "order": 22,
+      "focus_point": "授受与对待词 pack",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS023",
+      "order": 23,
+      "focus_point": "商务常见 pack",
+      "weakness_group": "搭配",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS024",
+      "order": 24,
+      "focus_point": "生活场景 pack",
+      "weakness_group": "语境",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS025",
+      "order": 25,
+      "focus_point": "近义词综合 pack",
+      "weakness_group": "近义辨析",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VS026",
+      "order": 26,
+      "focus_point": "搭配综合 pack",
+      "weakness_group": "搭配",
+      "daily_count": 12,
+      "study_style": "memory_pack",
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    }
+  ]
+}

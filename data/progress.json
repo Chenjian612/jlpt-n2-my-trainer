@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "initialized_at": "2026-03-03T00:26:55Z",
+  "continuity_mode": "sequential",
+  "session_log_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\session_log.jsonl",
+  "tracks": {
+    "grammar_drill": {
+      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\grammar_queue.json",
+      "current_index": 1,
+      "current_item_id": "GQ002",
+      "item_states": {
+        "GQ001": {
+          "status": "reviewed",
+          "attempts": 1,
+          "correct_count": 1,
+          "wrong_count": 0,
+          "last_result": "reviewed",
+          "last_answer": "Q1=A correct; Q2=B correct; Q3=B correct; Q4=B correct; Q5 ambiguous item replaced",
+          "last_updated": "2026-03-03T06:21:44Z",
+          "notes": "Completed reinforcement for にかかわらず / を問わず. Several items were invalid/ambiguous and were replaced during chat; user demonstrated solid grasp of を問わず and にかかわらず distinction."
+        }
+      }
+    },
+    "grammar_study": {
+      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\grammar_study_queue.json",
+      "current_index": 1,
+      "current_item_id": "GS002",
+      "item_states": {
+        "GS001": {
+          "status": "completed",
+          "attempts": 1,
+          "correct_count": 1,
+          "wrong_count": 0,
+          "last_result": "done",
+          "last_answer": "",
+          "last_updated": "2026-03-03T00:27:49Z",
+          "notes": "2026-03-03 grammar study pack delivered in chat: にかかわらず / を問わず + contrast point によらず"
+        }
+      }
+    },
+    "vocab_drill": {
+      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\vocab_queue.json",
+      "current_index": 0,
+      "current_item_id": "VQ001",
+      "item_states": {}
+    },
+    "vocab_study": {
+      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\vocab_study_queue.json",
+      "current_index": 0,
+      "current_item_id": "VS001",
+      "item_states": {}
+    },
+    "reading_drill": {
+      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\reading_queue.json",
+      "current_index": 0,
+      "current_item_id": "",
+      "item_states": {}
+    },
+    "listening_analyze": {
+      "queue_file": "C:\\Users\\tlzs\\AppData\\Local\\codex\\skills\\jlpt-n2-my-trainer\\data\\listening_queue.json",
+      "current_index": 0,
+      "current_item_id": "",
+      "item_states": {}
+    }
+  }
+}

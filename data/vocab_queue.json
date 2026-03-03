@@ -1,0 +1,266 @@
+{
+  "mode": "vocab_drill",
+  "sequence_type": "curated_focus_packs",
+  "items": [
+    {
+      "id": "VQ001",
+      "order": 1,
+      "focus_point": "近义词: 改善 / 改良",
+      "weakness_group": "近义辨析",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ002",
+      "order": 2,
+      "focus_point": "近义词: 追加 / 追加する context",
+      "weakness_group": "近义辨析",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ003",
+      "order": 3,
+      "focus_point": "近义词: 増える / 増やす",
+      "weakness_group": "词性",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ004",
+      "order": 4,
+      "focus_point": "近义词: 減る / 減らす",
+      "weakness_group": "词性",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ005",
+      "order": 5,
+      "focus_point": "近义词: 確か / 正確",
+      "weakness_group": "词义",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ006",
+      "order": 6,
+      "focus_point": "副词: だんだん / ますます",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ007",
+      "order": 7,
+      "focus_point": "副词: そろそろ / まもなく",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ008",
+      "order": 8,
+      "focus_point": "副词: たまたま / わざわざ",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ009",
+      "order": 9,
+      "focus_point": "副词: かなり / ずいぶん",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ010",
+      "order": 10,
+      "focus_point": "搭配: 影響を与える / 影響が出る",
+      "weakness_group": "搭配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ011",
+      "order": 11,
+      "focus_point": "搭配: 努力する / 工夫する",
+      "weakness_group": "搭配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ012",
+      "order": 12,
+      "focus_point": "搭配: 役に立つ / 参考になる",
+      "weakness_group": "搭配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ013",
+      "order": 13,
+      "focus_point": "搭配: 間に合う / 間に合わせる",
+      "weakness_group": "词性",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ014",
+      "order": 14,
+      "focus_point": "搭配: 気をつける / 気にする",
+      "weakness_group": "搭配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ015",
+      "order": 15,
+      "focus_point": "汉字词义: 余裕 / 余分",
+      "weakness_group": "词义",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ016",
+      "order": 16,
+      "focus_point": "汉字词义: 変更 / 変化",
+      "weakness_group": "词义",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ017",
+      "order": 17,
+      "focus_point": "汉字词义: 提出 / 提案",
+      "weakness_group": "词义",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ018",
+      "order": 18,
+      "focus_point": "汉字词义: 見送り / 見直し",
+      "weakness_group": "词义",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ019",
+      "order": 19,
+      "focus_point": "拟态副词: しっかり / はっきり",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ020",
+      "order": 20,
+      "focus_point": "拟态副词: ぐっすり / ゆっくり",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ021",
+      "order": 21,
+      "focus_point": "自动词/他动词 pack",
+      "weakness_group": "词性",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ022",
+      "order": 22,
+      "focus_point": "授受与对待词 pack",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ023",
+      "order": 23,
+      "focus_point": "商务常见 pack",
+      "weakness_group": "搭配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ024",
+      "order": 24,
+      "focus_point": "生活场景 pack",
+      "weakness_group": "语境",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ025",
+      "order": 25,
+      "focus_point": "近义词综合 pack",
+      "weakness_group": "近义辨析",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    },
+    {
+      "id": "VQ026",
+      "order": 26,
+      "focus_point": "搭配综合 pack",
+      "weakness_group": "搭配",
+      "difficulty": "normal",
+      "planned_count": 5,
+      "source_style": "simulated_official",
+      "source_ref": "N2V-2018 -> N2V-2012 -> targeted pack"
+    }
+  ]
+}
