@@ -131,6 +131,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 
 ## Official Resource Library (Local Files)
 - Local root: `references/official/`
+- Prebuilt mirror repo: `https://github.com/Chenjian612/jlpt-n2-my-trainer-resources`
 - Main indexes:
   - `references/official/meta/n2_index.csv` (N2-focused list)
   - `references/official/meta/download_manifest.json` (all files + source URLs)

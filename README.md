@@ -134,6 +134,14 @@ These are intentionally not tracked in git:
 - `data/wrong.jsonl` : personal wrong-answer log
 - `data/*.json` and `data/session_log.jsonl` : local progress state
 
+## Separate Resources Repo
+
+The prebuilt official resource library now lives in a separate repository:
+
+- https://github.com/Chenjian612/jlpt-n2-my-trainer-resources
+
+The main skill repo stays lightweight. Your local skill still reads `references/official/` first when those files exist on disk.
+
 ## Sync Official Resources
 
 ```bash
