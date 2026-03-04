@@ -40,15 +40,37 @@
     },
     "vocab_drill": {
       "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\vocab_queue.json",
-      "current_index": 0,
-      "current_item_id": "VQ001",
-      "item_states": {}
+      "current_index": 1,
+      "current_item_id": "VQ002",
+      "item_states": {
+        "VQ001": {
+          "status": "reviewed",
+          "attempts": 1,
+          "correct_count": 1,
+          "wrong_count": 0,
+          "last_result": "reviewed",
+          "last_answer": "Q1=B correct; Q2=B correct; Q3=A correct; Q4=C correct; Q5=A correct; quick review 3/3 all correct",
+          "last_updated": "2026-03-04T01:34:54Z",
+          "notes": "2026-03-04 vocab drill completed for 改善 / 改良 set. User scored 5/5 in main drill and 3/3 in quick review; distinction across 改善/改良/修正/改正/改訂/改定 is stable."
+        }
+      }
     },
     "vocab_study": {
       "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\vocab_study_queue.json",
-      "current_index": 0,
-      "current_item_id": "VS001",
-      "item_states": {}
+      "current_index": 1,
+      "current_item_id": "VS002",
+      "item_states": {
+        "VS001": {
+          "status": "completed",
+          "attempts": 1,
+          "correct_count": 1,
+          "wrong_count": 0,
+          "last_result": "done",
+          "last_answer": "",
+          "last_updated": "2026-03-03T06:49:44Z",
+          "notes": "2026-03-03 vocab study pack delivered in chat: 近义词 改善 / 改良 with 12-item memory pack and contrast set"
+        }
+      }
     },
     "reading_drill": {
       "queue_file": "C:\\Users\\tlzs\\jlpt-n2-my-trainer-sync\\data\\reading_queue.json",
