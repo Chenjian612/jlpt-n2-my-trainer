@@ -16,7 +16,10 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 - Give clear answer judgment after each user answer, then concise JP+CN explanation.
 - Expand to detailed explanation only when user asks or when `token_mode=deep`.
 - Show source attribution for each interactive question.
+- Show an explicit source line before each drill or listening question (for example `出处：...` or an equivalent compact source label).
 - For drill modes, put furigana only inside explanations; do not add furigana to the question stem unless explicitly requested.
+- In explanations, annotate only the small set of memorize-worthy words, using the format `単語(たんご)：中文意思`.
+- Do not annotate every word in the stem or passage; keep furigana and glosses only in the explanation and only for the key words worth memorizing.
 - For study modes, vocabulary readings may be shown directly because memorization is the goal.
 - Prefer logic-grouped review summaries over isolated point lists.
 - Avoid ambiguous single-choice items; if more than one choice can reasonably work, acknowledge that and replace or fix the item.
@@ -73,10 +76,10 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 - If the user explicitly gives a `focus_point`, `source_file`, or `content`, honor that request and do not override it with queue state.
 
 ## User-Facing Drill Flow (Default)
-1. Show only one question.
+1. Show a source line, then only one question.
 2. Wait for user answer (`A/B/C/D`).
 3. Return judgment: correct/wrong + right option.
-4. Return concise explanation in Japanese and Chinese, with furigana only in explanation.
+4. Return concise explanation in Japanese and Chinese, and list key memory words in the format `単語(たんご)：中文意思` when useful.
 5. Continue to next question.
 6. After final question, output wrong-point summary and review plan grouped by logic.
 
@@ -218,8 +221,10 @@ Use policy:
 - Parse `content` (dialogue, prompt, options; partial is allowed).
 - If `continuity_mode=sequential` and the user does not provide `content`, read the next item from `data/listening_queue.json` via `data/progress.json` and use its audio/script references as the source basis.
 - Infer question type (课题理解, 要点理解, 即时应答, 综合理解, etc.).
+- When presenting a listening item, show the source line before the question prompt.
 - Provide scene prediction, keywords, transition signals, and at least 3 trap points.
 - If options exist, provide answer choice and evidence-based explanation (JP + CN).
+- In explanations, annotate the few key memory words in the format `単語(たんご)：中文意思`.
 - In `token_mode=economy`, output compact clue chain rather than long paraphrase.
 - In interactive style, prioritize readability; in JSON style, follow schema in `prompts/listening_analyze.md`.
 
