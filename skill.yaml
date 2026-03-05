@@ -1,12 +1,12 @@
 name: jlpt-n2-my-trainer
-version: 0.7.0
-description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills and study packs for grammar, vocabulary, reading, listening, and review, with source labels, logic-grouped notes, local official resource sync, and sequential local progress tracking."
+version: 0.8.0
+description: "Personal JLPT N2 trainer (Chen): token-efficient interactive drills and study packs for grammar, vocabulary, reading, listening, dictation, and review, with source labels, logic-grouped notes, local official resource sync, and sequential local progress tracking."
 author: "Chen Jian"
 
 inputs:
   - name: mode
     required: true
-    description: "grammar_drill | grammar_study | vocab_drill | vocab_study | reading_drill | listening_analyze | review_wrong | vocab_review_wrong"
+    description: "grammar_drill | grammar_study | vocab_drill | vocab_study | reading_drill | listening_analyze | dictation_drill | review_wrong | vocab_review_wrong"
   - name: output_style
     required: false
     description: "interactive | json (default: interactive)"
@@ -45,7 +45,7 @@ inputs:
     description: "e.g., にかかわらず / 近义词 / 固定搭配 / 副词"
   - name: content
     required: false
-    description: "For listening_analyze: paste transcript/question/options here"
+    description: "For listening_analyze or dictation_drill: paste transcript/question/options here"
   - name: wrong_items
     required: false
     description: "For review modes: wrong-question JSON array or use local wrong.jsonl"

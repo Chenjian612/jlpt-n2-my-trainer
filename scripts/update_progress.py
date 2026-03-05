@@ -15,6 +15,18 @@ PROGRESS_FILE = DATA_DIR / "progress.json"
 SESSION_LOG_FILE = DATA_DIR / "session_log.jsonl"
 
 VALID_RESULTS = {"correct", "wrong", "done", "reviewed", "skipped"}
+VALID_MODES = [
+    "grammar_drill",
+    "grammar_study",
+    "vocab_drill",
+    "vocab_study",
+    "reading_drill",
+    "listening_analyze",
+    "dictation_drill",
+]
+MODE_TRACK_ALIAS = {
+    "dictation_drill": "listening_analyze",
+}
 
 
 def now_iso() -> str:
@@ -64,18 +76,7 @@ def advance_index(items: list[dict[str, Any]], item_states: dict[str, Any], curr
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Update sequential JLPT study progress")
-    parser.add_argument(
-        "--mode",
-        required=True,
-        choices=[
-            "grammar_drill",
-            "grammar_study",
-            "vocab_drill",
-            "vocab_study",
-            "reading_drill",
-            "listening_analyze",
-        ],
-    )
+    parser.add_argument("--mode", required=True, choices=VALID_MODES)
     parser.add_argument("--result", required=True, choices=sorted(VALID_RESULTS))
     parser.add_argument("--item-id", help="Queue item id; default is current item in progress.json")
     parser.add_argument("--answer", default="", help="Optional user answer summary")
@@ -85,11 +86,12 @@ def main() -> int:
     args = parser.parse_args()
 
     progress = load_json(args.progress)
+    track_mode = MODE_TRACK_ALIAS.get(args.mode, args.mode)
     tracks = progress.get("tracks")
-    if not isinstance(tracks, dict) or args.mode not in tracks:
+    if not isinstance(tracks, dict) or track_mode not in tracks:
         raise SystemExit(f"Mode not found in progress file: {args.mode}")
 
-    track = tracks[args.mode]
+    track = tracks[track_mode]
     queue_file = Path(track.get("queue_file", ""))
     items = load_queue(queue_file)
     if not items:
@@ -146,6 +148,7 @@ def main() -> int:
     log_row = {
         "ts": now_iso(),
         "mode": args.mode,
+        "track_mode": track_mode,
         "item_id": item_id,
         "item_index": item_index,
         "result": args.result,
@@ -158,6 +161,7 @@ def main() -> int:
 
     summary = {
         "mode": args.mode,
+        "track_mode": track_mode,
         "item_id": item_id,
         "result": args.result,
         "next_item_id": track["current_item_id"],

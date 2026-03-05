@@ -10,6 +10,7 @@ Personal Codex skill for JLPT N2 preparation.
 - Vocabulary study: daily memory packs without quiz questions
 - Reading drills: article-first practice with official-source-first selection
 - Listening analysis: trap points, keywords, and answer evidence
+- Listening dictation drills: keyword/full-sentence dictation with correction tags
 - Wrong-answer review: targeted reinforcement from local wrong-book data
 - Local official resource sync: keep public JLPT sample materials on disk
 - Sequential local progress: continue practice from the next queued item
@@ -33,8 +34,23 @@ Personal Codex skill for JLPT N2 preparation.
 - `vocab_study`
 - `reading_drill`
 - `listening_analyze`
+- `dictation_drill`
 - `review_wrong`
 - `vocab_review_wrong`
+
+## Listening Mode Quick Guide
+
+- `listening_analyze`
+  - Use for multiple-choice listening QA (`A/B/C/D`) with trap-point analysis.
+  - Typical prompt shape: `質問：... A/B/C/D` then user selects one option.
+- `dictation_drill`
+  - Use for keyword/full-sentence dictation and correction tags.
+  - Typical prompt shape: listen first, then submit heard words/sentence.
+
+Quick triggers:
+
+- `启动听力练习` / `继续听力练习` -> `listening_analyze`
+- `启动听写模式` / `继续听写练习` -> `dictation_drill`
 
 ## Continuous Study State
 
@@ -67,6 +83,12 @@ Advance after finishing one queued item:
 
 ```bash
 python3 scripts/update_progress.py --mode grammar_drill --result correct
+```
+
+Dictation uses the same listening queue/track:
+
+```bash
+python3 scripts/update_progress.py --mode dictation_drill --result reviewed
 ```
 
 See [skill.yaml](./skill.yaml) and [SKILL.md](./SKILL.md) for behavior and defaults.
@@ -114,6 +136,18 @@ Start reading practice:
 启动日语N2阅读练习
 ```
 
+Start listening analysis:
+
+```text
+启动听力练习
+```
+
+Start dictation drill:
+
+```text
+启动听写模式
+```
+
 Run with explicit JSON-style inputs:
 
 ```json
@@ -123,6 +157,26 @@ Run with explicit JSON-style inputs:
   "token_mode": "economy",
   "drill_flow": "one_by_one",
   "count": 5
+}
+```
+
+Listening analyze input example:
+
+```json
+{
+  "mode": "listening_analyze",
+  "output_style": "interactive",
+  "token_mode": "economy"
+}
+```
+
+Dictation drill input example:
+
+```json
+{
+  "mode": "dictation_drill",
+  "output_style": "interactive",
+  "token_mode": "economy"
 }
 ```
 

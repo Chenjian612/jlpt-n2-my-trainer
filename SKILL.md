@@ -1,6 +1,6 @@
 ---
 name: "jlpt-n2-my-trainer"
-description: "Personal JLPT N2 training skill for July exam prep with eight modes: grammar drills, grammar study packs, vocabulary drills, vocabulary study packs, reading drills, listening trap analysis, grammar wrong-answer reinforcement, and vocabulary wrong-answer reinforcement. Use token-efficient interactive practice or study by default; include source labels, explanation-only furigana, logic-grouped review notes, and sequential local progress tracking. Switch to strict JSON only when user explicitly requests machine-readable output. Includes local official-resource sync and wrong-book workflows."
+description: "Personal JLPT N2 training skill for July exam prep with nine modes: grammar drills, grammar study packs, vocabulary drills, vocabulary study packs, reading drills, listening trap analysis, listening dictation drills, grammar wrong-answer reinforcement, and vocabulary wrong-answer reinforcement. Use token-efficient interactive practice or study by default; include source labels, explanation-only furigana, logic-grouped review notes, and sequential local progress tracking. Switch to strict JSON only when user explicitly requests machine-readable output. Includes local official-resource sync and wrong-book workflows."
 ---
 
 # JLPT N2 My Trainer
@@ -32,6 +32,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
   - `vocab_drill=5`
   - `vocab_study=12`
   - `reading_drill=1`
+  - `dictation_drill=1`
 
 ## Token-Efficient Policy (Default)
 1. Local-first: use `references/official/meta/n2_index.csv` and `download_manifest.json` to locate material; avoid loading large files unless needed.
@@ -49,6 +50,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 - `mode=vocab_study`: Generate daily vocabulary study packs for memory, not quizzes.
 - `mode=reading_drill`: Run one-by-one reading practice with article-first exam flow.
 - `mode=listening_analyze`: Analyze traps, clues, and answer basis from listening content.
+- `mode=dictation_drill`: Run one-by-one listening dictation with keyword/full-sentence correction.
 - `mode=review_wrong`: Rank grammar weaknesses and generate targeted reinforcement questions.
 - `mode=vocab_review_wrong`: Rank vocabulary weaknesses and generate targeted reinforcement questions.
 
@@ -63,6 +65,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 - `vocab_study` -> `data/vocab_study_queue.json`
 - `reading_drill` -> `data/reading_queue.json`
 - `listening_analyze` -> `data/listening_queue.json`
+- `dictation_drill` -> `data/listening_queue.json` (shared with `listening_analyze`)
 - If queue/progress files are missing, initialize them with `python3 scripts/init_progress.py`.
 - After a practice set is completed, update local state with `python3 scripts/update_progress.py ...`.
 - To inspect the next queued item for all tracks, run `python3 scripts/progress_status.py`.
@@ -73,6 +76,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
   - Vocabulary study: follow `vocab_study_queue.json` daily memory packs in order until exhausted.
   - Reading: prefer official local reading sources in fixed order (`N2R-2018` -> `N2R-2012` -> `N2-mondai`).
   - Listening: prefer official local listening sources in fixed order (`N2L-2018 Q1-Q5` -> `N2L-2012 Q1-Q5` -> `N2Sample`).
+  - Dictation: use the same listening queue/order as `listening_analyze`.
 - If the user explicitly gives a `focus_point`, `source_file`, or `content`, honor that request and do not override it with queue state.
 
 ## User-Facing Drill Flow (Default)
@@ -97,6 +101,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
   - `prompts/vocab_study.md`
   - `prompts/reading_drill.md`
   - `prompts/listening_analyze.md`
+  - `prompts/dictation_drill.md`
   - `prompts/review_wrong.md`
   - `prompts/vocab_review_wrong.md`
 - Input examples:
@@ -107,6 +112,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
   - `examples/vocab_study.interactive.input.json`
   - `examples/reading_drill.interactive.input.json`
   - `examples/listening_analyze.input.json`
+  - `examples/dictation_drill.input.json`
   - `examples/review_wrong.interactive.input.json`
   - `examples/vocab_review_wrong.interactive.input.json`
 - Committed notes:
@@ -228,7 +234,22 @@ Use policy:
 - In `token_mode=economy`, output compact clue chain rather than long paraphrase.
 - In interactive style, prioritize readability; in JSON style, follow schema in `prompts/listening_analyze.md`.
 
-### 7) review_wrong
+### 7) dictation_drill
+- Goal: improve real listening decoding speed via short dictation turns.
+- If `continuity_mode=sequential` and user does not provide `content`, read current item from `data/listening_queue.json` via `data/progress.json`.
+- Show source line + audio reference, then ask user to submit either:
+  - keyword dictation (`关键词听写`, default in `token_mode=economy`)
+  - full-sentence dictation (`整句听写`) if requested.
+- After user submission, return:
+  - coverage judgment (`关键词命中率` or sentence completeness)
+  - corrected line (natural Japanese)
+  - compact error tags (`听漏`, `误听`, `词形`, `助词`, `时态`)
+  - one shadowing action + one replay focus hint.
+- Furigana stays in explanation only, and only for key memory words.
+- For progress updates, use `scripts/update_progress.py --mode dictation_drill ...`; it shares the listening track.
+- In JSON mode, follow schema in `prompts/dictation_drill.md`.
+
+### 8) review_wrong
 - Use `wrong_items` input.
 - If `wrong_items` is missing, read recent lines from `data/wrong.jsonl` to infer grammar weak points.
 - Rank weakness types with weights and generate 5 targeted grammar questions.
@@ -239,7 +260,7 @@ Use policy:
 - Add paired-sentence reinforcement for confused pairs when useful.
 - In JSON mode, follow schema in `prompts/review_wrong.md`.
 
-### 8) vocab_review_wrong
+### 9) vocab_review_wrong
 - Use `wrong_items` input.
 - If `wrong_items` is missing, read recent lines from `data/wrong.jsonl` to infer vocabulary weak points.
 - Rank weakness types with weights and generate 5 targeted vocabulary questions.

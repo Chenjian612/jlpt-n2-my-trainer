@@ -1,0 +1,7 @@
+{
+  "mode": "dictation_drill",
+  "output_style": "interactive",
+  "token_mode": "economy",
+  "continuity_mode": "sequential",
+  "explain_level": "standard"
+}

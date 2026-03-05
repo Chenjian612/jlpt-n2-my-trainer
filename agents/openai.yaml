@@ -1,4 +1,4 @@
 interface:
   display_name: "JLPT N2 My Trainer"
   short_description: "Sequential interactive N2 trainer"
-  default_prompt: "Continue JLPT N2 study or practice in economy mode using local sequential progress for grammar study, vocabulary study, grammar drills, vocabulary drills, reading, listening, or review, with source labels, furigana only where appropriate, and logic-grouped notes."
+  default_prompt: "Continue JLPT N2 study or practice in economy mode using local sequential progress for grammar study, vocabulary study, grammar drills, vocabulary drills, reading, listening analysis, dictation drills, or review, with source labels, furigana only where appropriate, and logic-grouped notes."
