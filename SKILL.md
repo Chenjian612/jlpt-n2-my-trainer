@@ -17,12 +17,16 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 - Expand to detailed explanation only when user asks or when `token_mode=deep`.
 - Show source attribution for each interactive question.
 - Show an explicit source line before each drill or listening question (for example `出处：...` or an equivalent compact source label).
+- For listening mode 6, support two user-facing entry forms by default: `6，真题` and `6，文字版`.
+- For official listening multiple-choice items, keep the source's original option numbering (`1/2/3/4`) when present instead of forcing `A/B/C/D`.
 - For drill modes, put furigana only inside explanations; do not add furigana to the question stem unless explicitly requested.
 - In explanations, annotate only the small set of memorize-worthy words, using the format `単語(たんご)：中文意思`.
 - Do not annotate every word in the stem or passage; keep furigana and glosses only in the explanation and only for the key words worth memorizing.
 - For study modes, vocabulary readings may be shown directly because memorization is the goal.
 - Prefer logic-grouped review summaries over isolated point lists.
 - Avoid ambiguous single-choice items; if more than one choice can reasonably work, acknowledge that and replace or fix the item.
+- When explaining listening answers, include a `原文` block with only the key supporting line(s); do not dump a long transcript unless the user explicitly asks.
+- For dictation mode 7, default to a lowered keyword-dictation flow: scene hint + target range + hint-word direction + `2-4` target keywords.
 - Output strict JSON only when user explicitly asks for JSON or `output_style=json`.
 - Use sequential continuity by default: when local queue/progress files exist, continue from the next uncompleted item instead of restarting from scratch.
 - Default values when missing: `output_style=interactive`, `token_mode=economy`, `source_style=simulated_official`, `note_style=logic_grouped`, `continuity_mode=sequential`, `drill_flow=one_by_one`, `explain_level=standard`, `difficulty=normal`.
@@ -39,9 +43,10 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 2. Progressive disclosure: provide minimal high-value explanation first; add deep explanation on explicit request (`详解`, `deep`).
 3. Per-question compact format: judgment, correct answer, one key point, one distractor analysis, one memory tip.
 4. Listening analysis compact mode: prioritize key signals (关键词/转折词/陷阱点/依据句), avoid long paraphrase.
-5. End-of-set summary concise: weakness tags + 3 actionable review steps.
-6. Source label compact: use short source lines.
-7. Continuity compact: if `data/progress.json` exists, read only the active track and next item; avoid loading entire local state unless needed.
+5. When citing listening transcripts, quote only the short key line(s) needed for answer support or correction.
+6. End-of-set summary concise: weakness tags + 3 actionable review steps.
+7. Source label compact: use short source lines.
+8. Continuity compact: if `data/progress.json` exists, read only the active track and next item; avoid loading entire local state unless needed.
 
 ## Mode Routing
 - `mode=grammar_drill`: Generate multiple-choice grammar questions.
@@ -81,7 +86,7 @@ Use this skill to run focused JLPT N2 practice for a Chinese-speaking learner wo
 
 ## User-Facing Drill Flow (Default)
 1. Show a source line, then only one question.
-2. Wait for user answer (`A/B/C/D`).
+2. Wait for user answer (`A/B/C/D` or the official numbering used by the source).
 3. Return judgment: correct/wrong + right option.
 4. Return concise explanation in Japanese and Chinese, and list key memory words in the format `単語(たんご)：中文意思` when useful.
 5. Continue to next question.
@@ -226,10 +231,35 @@ Use policy:
 ### 6) listening_analyze
 - Parse `content` (dialogue, prompt, options; partial is allowed).
 - If `continuity_mode=sequential` and the user does not provide `content`, read the next item from `data/listening_queue.json` via `data/progress.json` and use its audio/script references as the source basis.
+- Default user-facing entry forms:
+  - `6，真题`: official listening multiple-choice with real audio.
+  - `6，文字版`: text-adapted listening item that preserves the same logic without requiring the user to play audio.
+- If the user explicitly asks for `官方例题`, you may draw from local official sample/guideline audio (for example `N2Sample.mp3`); do not switch to that source family by default.
 - Infer question type (课题理解, 要点理解, 即时应答, 综合理解, etc.).
 - When presenting a listening item, show the source line before the question prompt.
+- For `6，真题`, include:
+  - mode/form label
+  - source
+  - track number / `几番`
+  - audio reference
+  - official prompt and options
+  - answer format matching the official numbering when available
+- For `6，文字版`, include:
+  - source
+  - a short adapted dialogue/prompt
+  - question
+  - options
 - Provide scene prediction, keywords, transition signals, and at least 3 trap points.
 - If options exist, provide answer choice and evidence-based explanation (JP + CN).
+- After the user answers, default explanation structure is:
+  - 判对错
+  - 题型
+  - 原文
+  - 关键词
+  - 陷阱点
+  - 依据链
+  - 一句话记忆
+- In the `原文` block, quote only the short line(s) directly tied to the answer.
 - In explanations, annotate the few key memory words in the format `単語(たんご)：中文意思`.
 - In `token_mode=economy`, output compact clue chain rather than long paraphrase.
 - In interactive style, prioritize readability; in JSON style, follow schema in `prompts/listening_analyze.md`.
@@ -237,16 +267,34 @@ Use policy:
 ### 7) dictation_drill
 - Goal: improve real listening decoding speed via short dictation turns.
 - If `continuity_mode=sequential` and user does not provide `content`, read current item from `data/listening_queue.json` via `data/progress.json`.
-- Show source line + audio reference, then ask user to submit either:
-  - keyword dictation (`关键词听写`, default in `token_mode=economy`)
+- Default command forms:
+  - `7`
+  - `7，出一题`
+  - `7，继续`
+  - `7，关键词听写`
+- Default interactive flow is lowered keyword dictation for the current learner stage. Before asking for an answer, provide:
+  - mode / current version
+  - source
+  - track number / `几番`
+  - audio reference
+  - scene hint
+  - target listening range
+  - hint-word direction
+  - answer format
+- Ask the user to submit either:
+  - lowered keyword dictation (`关键词听写`, default; user only needs `2-4` keywords)
+  - standard keyword dictation if the user explicitly asks
   - full-sentence dictation (`整句听写`) if requested.
 - After user submission, return:
-  - coverage judgment (`关键词命中率` or sentence completeness)
-  - corrected line (natural Japanese)
-  - compact error tags (`听漏`, `误听`, `词形`, `助词`, `时态`)
-  - one shadowing action + one replay focus hint.
+  - 判定
+  - 修正版
+  - 错误标签
+  - 训练动作
+  - 回放聚焦
+- If the user clearly captured the wrong segment (for example the example prompt instead of `1番`), mark it as `retry` / `定位偏移` guidance instead of a normal wrong answer.
 - Furigana stays in explanation only, and only for key memory words.
 - For progress updates, use `scripts/update_progress.py --mode dictation_drill ...`; it shares the listening track.
+- Only advance progress after a valid attempt on the intended target line; do not advance on pure positioning mistakes.
 - In JSON mode, follow schema in `prompts/dictation_drill.md`.
 
 ### 8) review_wrong

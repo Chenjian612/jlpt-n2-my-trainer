@@ -1,5 +1,136 @@
 {
   "mode": "listening_analyze",
   "sequence_type": "official_sources_first",
-  "items": []
+  "items": [
+    {
+      "id": "LQ001",
+      "order": 1,
+      "source_key": "N2L-2018-Q1",
+      "source_label": "官方公开题音频（N2L-2018 Q1）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/fb06a34137_N2Q1.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2018/mp3/N2Q1.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/6f9f188165_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2018/pdf/N2script.pdf",
+      "question_type_hint": "Q1",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ002",
+      "order": 2,
+      "source_key": "N2L-2018-Q2",
+      "source_label": "官方公开题音频（N2L-2018 Q2）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/102205c314_N2Q2.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2018/mp3/N2Q2.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/6f9f188165_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2018/pdf/N2script.pdf",
+      "question_type_hint": "Q2",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ003",
+      "order": 3,
+      "source_key": "N2L-2018-Q3",
+      "source_label": "官方公开题音频（N2L-2018 Q3）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/2749d00dda_N2Q3.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2018/mp3/N2Q3.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/6f9f188165_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2018/pdf/N2script.pdf",
+      "question_type_hint": "Q3",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ004",
+      "order": 4,
+      "source_key": "N2L-2018-Q4",
+      "source_label": "官方公开题音频（N2L-2018 Q4）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/b8b0178793_N2Q4.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2018/mp3/N2Q4.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/6f9f188165_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2018/pdf/N2script.pdf",
+      "question_type_hint": "Q4",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ005",
+      "order": 5,
+      "source_key": "N2L-2018-Q5",
+      "source_label": "官方公开题音频（N2L-2018 Q5）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/f352d9d370_N2Q5.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2018/mp3/N2Q5.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/6f9f188165_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2018/pdf/N2script.pdf",
+      "question_type_hint": "Q5",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ006",
+      "order": 6,
+      "source_key": "N2L-2012-Q1",
+      "source_label": "官方公开题音频（N2L-2012 Q1）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/9ff9801718_N2Q1.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2012/mp3/N2Q1.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/f446e2eaec_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2012/pdf/N2script.pdf",
+      "question_type_hint": "Q1",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ007",
+      "order": 7,
+      "source_key": "N2L-2012-Q3",
+      "source_label": "官方公开题音频（N2L-2012 Q3）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/bf961cb621_N2Q3.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2012/mp3/N2Q3.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/f446e2eaec_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2012/pdf/N2script.pdf",
+      "question_type_hint": "Q3",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ008",
+      "order": 8,
+      "source_key": "N2L-2012-Q4",
+      "source_label": "官方公开题音频（N2L-2012 Q4）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/9db7652517_N2Q4.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2012/mp3/N2Q4.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/f446e2eaec_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2012/pdf/N2script.pdf",
+      "question_type_hint": "Q4",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ009",
+      "order": 9,
+      "source_key": "N2L-2012-Q5",
+      "source_label": "官方公开题音频（N2L-2012 Q5）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/59f35380c9_N2Q5.mp3",
+      "audio_url": "https://www.jlpt.jp/samples/sample2012/mp3/N2Q5.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/f446e2eaec_N2script.pdf",
+      "script_url": "https://www.jlpt.jp/samples/sample2012/pdf/N2script.pdf",
+      "question_type_hint": "Q5",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    },
+    {
+      "id": "LQ010",
+      "order": 10,
+      "source_key": "N2Sample-2009",
+      "source_label": "官方公开题音频（N2Sample）",
+      "audio_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/f24a9d4a84_N2Sample.mp3",
+      "audio_url": "https://www.jlpt.jp/e/samples/mp3/N2Sample.mp3",
+      "script_file": "/Users/chenjian/.codex/skills/jlpt-n2-my-trainer/references/official/files/e306af7ceb_N2-script.pdf",
+      "script_url": "https://www.jlpt.jp/e/samples/pdf/N2-script.pdf",
+      "question_type_hint": "sample09",
+      "planned_count": 1,
+      "source_style": "official_adapted"
+    }
+  ]
 }
